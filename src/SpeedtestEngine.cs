@@ -72,23 +72,13 @@ internal static class SpeedtestEngine
             bool any = false;
             try
             {
-                var links = Resources.FindObjectsOfTypeAll<CableLink>();
-                if (links != null)
+                foreach (var link in gregCore.Core.Networking.GregCables.FindByServer(target))
                 {
-                    foreach (var link in links)
-                    {
-                        if (link == null) continue;
-                        Server parent = null;
-                        try { parent = link.parentServer; } catch { continue; }
-                        if (parent == null) continue;
-                        bool same;
-                        try { same = parent == target; } catch { continue; }
-                        if (!same) continue;
-                        float s = 0f;
-                        try { s = link.connectionSpeed; } catch { continue; }
-                        if (!any || s < down) down = s;
-                        any = true;
-                    }
+                    if (link == null) continue;
+                    float s = 0f;
+                    try { s = link.connectionSpeed; } catch { continue; }
+                    if (!any || s < down) down = s;
+                    any = true;
                 }
             }
             catch { }
