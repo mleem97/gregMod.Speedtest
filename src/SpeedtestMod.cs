@@ -1,5 +1,6 @@
 using MelonLoader;
 using System;
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("ModCoverage.Tests")]
 
 [assembly: MelonInfo(typeof(GregModSpeedtest.SpeedtestMod), "gregMod.Speedtest", "0.1.1", "mleem97")]
 [assembly: MelonGame("Waseku", "Data Center")]
