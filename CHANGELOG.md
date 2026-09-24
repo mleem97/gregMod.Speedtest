@@ -1,5 +1,11 @@
 # Changelog — gregMod.Speedtest
 
+## [0.1.1] — 2026-09-24
+
+### Changed
+
+- Link discovery via GregCables.FindByServer.
+
 ## [0.1.0] — 2026-09-24
 
 ### Added

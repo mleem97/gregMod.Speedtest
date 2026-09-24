@@ -1,7 +1,7 @@
 using MelonLoader;
 using System;
 
-[assembly: MelonInfo(typeof(GregModSpeedtest.SpeedtestMod), "gregMod.Speedtest", "0.1.0", "mleem97")]
+[assembly: MelonInfo(typeof(GregModSpeedtest.SpeedtestMod), "gregMod.Speedtest", "0.1.1", "mleem97")]
 [assembly: MelonGame("Waseku", "Data Center")]
 
 namespace GregModSpeedtest;
@@ -31,7 +31,7 @@ public sealed class SpeedtestMod : MelonMod
             SpeedtestFeature.ConfigureToggleKey(keyEntry.Value);
         }
         catch { }
-        MelonLogger.Msg($"[Speedtest] v0.1.0 loaded (gregCore UI). {SpeedtestFeature.ToggleKeyLabel} = Speedtest panel.");
+        MelonLogger.Msg($"[Speedtest] v0.1.1 loaded (gregCore UI). {SpeedtestFeature.ToggleKeyLabel} = Speedtest panel.");
         try { RegisterCoreExtras(); } catch { }
     }
 
@@ -40,7 +40,7 @@ public sealed class SpeedtestMod : MelonMod
         try
         {
             gregCore.Core.Mods.GregModRegistry.Register(
-                "gregMod.Speedtest", "Speedtest", "0.1.0",
+                "gregMod.Speedtest", "Speedtest", "0.1.1",
                 new string[] { "speedtest" });
             gregCore.UI.GregHudRegistry.Register("speedtest",
                 SpeedtestFeature.ToggleKeyLabel, "Speed");
