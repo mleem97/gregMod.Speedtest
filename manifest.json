@@ -1,6 +1,8 @@
 {
     "author": "mleem97",
     "name": "gregMod.Speedtest",
-    "version": "0.1.0",
-    "dependencies": ["gregCore"]
+    "version": "0.1.3-dev",
+    "dependencies": [
+        "gregCore"
+    ]
 }
